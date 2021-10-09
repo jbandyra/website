@@ -1,0 +1,26 @@
+.aboutWrapper {
+  display: flex;
+  max-width: 1310px;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  margin: 120px auto;
+}
+
+.aboutmeText {
+  text-transform: uppercase;
+  color: rgb(36, 72, 134);
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 0;
+  margin-bottom: 8px;
+}
+
+.aboutmeDescription {
+  font-size: 32px;
+  color: rgb(18, 42, 71);
+  margin: 0;
+  padding: 0;
+  letter-spacing: -0.5px;
+}

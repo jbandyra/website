@@ -1,0 +1,37 @@
+.bannerWrapper {
+  overflow: hidden;
+  background-image: url("/banner-light.svg");
+  background-color: rgb(31, 62, 118);
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: cover;
+  padding: 140px 20px 0;
+  // border-bottom-right-radius: 150px;
+}
+
+.bannerInnerWrapper {
+  display: flex;
+  max-width: 1310px;
+  margin: 0 auto;
+}
+
+.bannerHeader {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 84px;
+}
+
+.bannerTextWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+.bannerDescription {
+  font-size: 20px;
+  font-weight: 100;
+  span {
+    font-size: 24px;
+    font-weight: 700;
+  }
+}

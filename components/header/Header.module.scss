@@ -1,0 +1,69 @@
+.headerWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  height: 80px;
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+.headerWrapperStickyFirst {
+  @extend .headerWrapper;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.headerWrapperStickySecond {
+  @extend .headerWrapper;
+  background: rgba(255, 255, 255, 0.25);
+}
+.headerWrapperStickyThird {
+  @extend .headerWrapper;
+  background: rgba(255, 255, 255, 0.5);
+}
+.headerWrapperStickyFourth {
+  @extend .headerWrapper;
+  background: rgba(255, 255, 255, 0.75);
+}
+.headerWrapperStickyFifth {
+  @extend .headerWrapper;
+  background: rgba(255, 255, 255, 1);
+}
+
+.headerInnerWrapper {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  max-width: 1310px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media (max-width: 1310px) {
+    padding: 0 20px;
+    width: auto;
+  }
+}
+
+.headerList {
+  display: flex;
+  li {
+    list-style-type: none;
+    font-size: 16px;
+    cursor: pointer;
+    &:hover {
+      color: #25cb9e;
+      text-decoration: underline;
+    }
+  }
+  li + li {
+    margin-left: 50px;
+  }
+}
+
+.headerListSticky {
+  @extend .headerList;
+  li {
+    color: rgb(31, 62, 118);
+  }
+}
