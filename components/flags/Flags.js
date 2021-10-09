@@ -6,6 +6,9 @@ const Flags = () => {
   const container = useRef(null);
 
   useEffect(() => {
+    if (!container.current) {
+      return;
+    }
     lottie.loadAnimation({
       container: container.current,
       renderer: "svg",
