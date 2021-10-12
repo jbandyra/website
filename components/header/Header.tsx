@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import styled, { css } from "styled-components";
 import Image from "next/image";
 
 import Logo from "@/assets/logo.png";
