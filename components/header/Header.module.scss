@@ -59,6 +59,9 @@
   li + li {
     margin-left: 50px;
   }
+  @media (max-width: 900px) {
+    display: none;
+  }
 }
 
 .headerListSticky {
@@ -66,4 +69,80 @@
   li {
     color: rgb(31, 62, 118);
   }
+}
+
+.headerHamburger {
+  @media (min-width: 900px) {
+    display: none;
+  }
+}
+
+.menu {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  ul {
+    padding: 0;
+    li {
+      list-style-type: none;
+      font-size: 36px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 20px;
+      color: rgb(31, 62, 118);
+      transform: translateY(10%);
+      opacity: 0;
+    }
+  }
+}
+
+@keyframes listItem {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.menuOpen {
+  @extend .menu;
+  opacity: 1;
+  visibility: visible;
+  ul {
+    li:first-of-type {
+      animation-name: listItem;
+      animation-duration: 0.4s;
+      animation-delay: 0.3s;
+      animation-fill-mode: forwards;
+    }
+    li:nth-of-type(2) {
+      animation-name: listItem;
+      animation-duration: 0.4s;
+      animation-delay: 0.5s;
+      animation-fill-mode: forwards;
+    }
+    li:nth-of-type(3) {
+      animation-name: listItem;
+      animation-duration: 0.4s;
+      animation-delay: 0.7s;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+
+.closeIcon {
+  position: fixed;
+  top: 15px;
+  left: 15px;
 }

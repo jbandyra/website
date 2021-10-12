@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
-
+import styled, { css } from "styled-components";
 import Image from "next/image";
 
 import Logo from "@/assets/logo.png";
 import LogoDark from "@/assets/logo-dark.png";
 import styles from "./Header.module.scss";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { VscClose } from "react-icons/vsc";
 
 const menuItems = [
   { label: "Strona Główna", path: "#" },
@@ -14,6 +16,7 @@ const menuItems = [
 
 const Header = () => {
   const [offsetY, setOffsetY] = useState(0);
+  const [isMobileNavOn, setMobileNav] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setOffsetY(window.pageYOffset);
@@ -51,6 +54,21 @@ const Header = () => {
         <ul
           className={offsetY > 75 ? styles.headerListSticky : styles.headerList}
         >
+          {menuItems.map((item) => (
+            <li key={item.path}>{item.label}</li>
+          ))}
+        </ul>
+        <div className={styles.headerHamburger}>
+          <GiHamburgerMenu size="32px" onClick={() => setMobileNav(true)} />
+        </div>
+      </div>
+      <div className={isMobileNavOn ? styles.menuOpen : styles.menu}>
+        <VscClose
+          className={styles.closeIcon}
+          size="44px"
+          onClick={() => setMobileNav(false)}
+        />
+        <ul>
           {menuItems.map((item) => (
             <li key={item.path}>{item.label}</li>
           ))}

@@ -23,6 +23,9 @@
   margin: 0;
   padding: 0;
   letter-spacing: -0.5px;
+  @media (max-width: 700px) {
+    text-align: center;
+  }
 }
 
 .aboutInnerWrapper {
@@ -31,6 +34,11 @@
   max-width: 1100px;
   width: 100%;
   margin-top: 50px;
+  @media (max-width: 700px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
 }
 
 .aboutIconBoxWrapper {
