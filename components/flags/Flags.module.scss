@@ -2,6 +2,6 @@
   transform: translate(50px, -100px) scale(0.8);
 
   @media (max-width: 1024px) {
-    display: none;
+    transform: translate(0, -70px) scale(0.5);
   }
 }

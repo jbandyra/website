@@ -14,7 +14,7 @@ const Flags = () => {
       renderer: "svg",
       loop: false,
       autoplay: true,
-      animationData: require("./flags.json"),
+      animationData: require("./flags2.json"),
     });
   }, []);
   return <div className={styles.flagsWrapper} ref={container}></div>;

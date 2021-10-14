@@ -40,7 +40,7 @@ const Header = () => {
         return styles.headerWrapper;
     }
   };
-
+  console.log({ offsetY });
   return (
     <nav className={getNavStyles()}>
       <div className={styles.headerInnerWrapper}>
@@ -67,13 +67,18 @@ const Header = () => {
       </div>
       <div className={isMobileNavOn ? styles.menuOpen : styles.menu}>
         <VscClose
-          className={styles.closeIcon}
+          className={offsetY > 75 ? styles.closeIcon : styles.closeIconDark}
           size="44px"
           onClick={() => setMobileNav(false)}
         />
         <ul>
           {menuItems.map((item) => (
-            <li key={item.path}>{item.label}</li>
+            <li
+              key={item.path}
+              className={offsetY > 290 ? styles.darkListItem : ""}
+            >
+              {item.label}
+            </li>
           ))}
         </ul>
       </div>

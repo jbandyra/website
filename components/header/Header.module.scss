@@ -104,9 +104,13 @@
       font-weight: 700;
       text-align: center;
       margin-bottom: 20px;
-      color: rgb(31, 62, 118);
+      color: white;
+      // color: rgb(31, 62, 118);
       transform: translateY(10%);
       opacity: 0;
+    }
+    .darkListItem {
+      color: rgb(31, 62, 118);
     }
   }
 }
@@ -152,4 +156,10 @@
   position: fixed;
   top: 15px;
   left: 15px;
+  color: rgb(31, 62, 118);
+}
+
+.closeIconDark {
+  @extend .closeIcon;
+  color: white;
 }
