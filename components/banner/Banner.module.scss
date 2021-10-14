@@ -6,7 +6,9 @@
   background-position: top left;
   background-size: cover;
   padding: 140px 20px 0;
-  // border-bottom-right-radius: 150px;
+  @media (max-width: 400px) {
+    padding-bottom: 140px;
+  }
 }
 
 .bannerInnerWrapper {
@@ -21,6 +23,10 @@
   font-size: 84px;
   @media (max-width: 600px) {
     font-size: 64px;
+    text-align: center;
+  }
+  @media (max-width: 400px) {
+    font-size: 54px;
     text-align: center;
   }
 }

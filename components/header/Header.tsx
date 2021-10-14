@@ -57,7 +57,11 @@ const Header = () => {
             <li key={item.path}>{item.label}</li>
           ))}
         </ul>
-        <div className={styles.headerHamburger}>
+        <div
+          className={
+            offsetY > 75 ? styles.headerHamburgerDark : styles.headerHamburger
+          }
+        >
           <GiHamburgerMenu size="32px" onClick={() => setMobileNav(true)} />
         </div>
       </div>

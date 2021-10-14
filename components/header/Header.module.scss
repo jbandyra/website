@@ -72,9 +72,15 @@
 }
 
 .headerHamburger {
+  color: white;
   @media (min-width: 900px) {
     display: none;
   }
+}
+
+.headerHamburgerDark {
+  @extend .headerHamburger;
+  color: rgb(31, 62, 118);
 }
 
 .menu {
@@ -92,6 +98,7 @@
   ul {
     padding: 0;
     li {
+      visibility: visible;
       list-style-type: none;
       font-size: 36px;
       font-weight: 700;
