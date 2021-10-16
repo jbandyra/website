@@ -17,7 +17,7 @@ const Flags = () => {
       animationData: require("./flags2.json"),
     });
   }, []);
-  return <div className={styles.flagsWrapper} ref={container}></div>;
+  return <div className={styles.flagsWrapper} ref={container} />;
 };
 
 export default Flags;

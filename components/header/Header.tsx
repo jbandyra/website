@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
-import Logo from "@/assets/logo.png";
-import LogoDark from "@/assets/logo-dark.png";
+import Logo from "@assets/logo.png";
+import LogoDark from "@assets/logo-dark.png";
 import styles from "./Header.module.scss";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { VscClose } from "react-icons/vsc";
@@ -40,7 +40,7 @@ const Header = () => {
         return styles.headerWrapper;
     }
   };
-  console.log({ offsetY });
+
   return (
     <nav className={getNavStyles()}>
       <div className={styles.headerInnerWrapper}>

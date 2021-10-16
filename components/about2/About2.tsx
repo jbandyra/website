@@ -7,11 +7,11 @@ const About2 = () => {
       <div className={styles.textWrapper}>
         <h2>
           Jakub <strong>Bandyra</strong>
-          <p>
-            Twórca działalności, nauczyciel, magister filologii angielskiej,
-            translatoryk
-          </p>
         </h2>
+        <p>
+          Twórca działalności, nauczyciel, magister filologii angielskiej,
+          translatoryk
+        </p>
       </div>
     </section>
   );

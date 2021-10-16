@@ -37,7 +37,8 @@ const About = () => {
           <h2 className={styles.aboutIconBoxTitle}>Podejście</h2>
           <p className={styles.aboutIconBoxDescription}>
             Bez pośredników - przetłumaczę Twoje treści bezpośrednio dla Ciebie
-            i zadbam, aby wiernie reprezentowały Twój zamysł.
+            i zadbam, aby wiernie reprezentowały Twój zamysł. Twój zamysł. Identyczna idea przyświeca mi w roli nauczyciela.
+            Chcę, aby każdy z moich uczniów czuł się doceniony, aby dokonywał wymiernych i istotnych postępów w nauce języka.
           </p>
         </div>
       </div>
