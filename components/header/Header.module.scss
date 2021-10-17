@@ -6,29 +6,30 @@
   background-color: transparent;
   height: 80px;
   z-index: 999;
+  backdrop-filter: var(--nav-blur);
   transition: all 0.3s ease;
 }
 
 .headerWrapperStickyFirst {
   @extend .headerWrapper;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--nav-opacity-1);
 }
 
 .headerWrapperStickySecond {
   @extend .headerWrapper;
-  background: rgba(255, 255, 255, 0.25);
+  background: var(--nav-opacity-2);
 }
 .headerWrapperStickyThird {
   @extend .headerWrapper;
-  background: rgba(255, 255, 255, 0.5);
+  background: var(--nav-opacity-3);
 }
 .headerWrapperStickyFourth {
   @extend .headerWrapper;
-  background: rgba(255, 255, 255, 0.75);
+  background: var(--nav-opacity-4);
 }
 .headerWrapperStickyFifth {
   @extend .headerWrapper;
-  background: rgba(255, 255, 255, 1);
+  background: var(--nav-full);
 }
 
 .headerInnerWrapper {
@@ -48,16 +49,25 @@
 .headerList {
   display: flex;
   li {
+    display: flex;
+    align-items: center;
     list-style-type: none;
     font-size: 16px;
     cursor: pointer;
     &:hover {
-      color: #25cb9e;
+      // color: #25cb9e;
       text-decoration: underline;
     }
   }
   li + li {
     margin-left: 50px;
+  }
+  .navDarkToggle {
+    font-size: 32px;
+    margin-left: 25px;
+    &:hover {
+      text-decoration: none;
+    }
   }
   @media (max-width: 900px) {
     display: none;
@@ -67,7 +77,7 @@
 .headerListSticky {
   @extend .headerList;
   li {
-    color: rgb(31, 62, 118);
+    color: var(--nav-sticky-color);
   }
 }
 
@@ -80,12 +90,14 @@
 
 .headerHamburgerDark {
   @extend .headerHamburger;
-  color: rgb(31, 62, 118);
 }
 
 .menu {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
@@ -95,6 +107,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 9999;
   ul {
     padding: 0;
     li {
@@ -104,14 +117,12 @@
       font-weight: 700;
       text-align: center;
       margin-bottom: 20px;
-      color: white;
-      // color: rgb(31, 62, 118);
       transform: translateY(10%);
       opacity: 0;
     }
-    .darkListItem {
-      color: rgb(31, 62, 118);
-    }
+    // .darkListItem {
+    //   // color: $color-primary;
+    // }
   }
 }
 
@@ -151,6 +162,12 @@
       animation-delay: 0.7s;
       animation-fill-mode: forwards;
     }
+    li:nth-of-type(4) {
+      animation-name: listItem;
+      animation-duration: 0.4s;
+      animation-delay: 1s;
+      animation-fill-mode: forwards;
+    }
   }
 }
 
@@ -163,5 +180,4 @@
 
 .closeIconDark {
   @extend .closeIcon;
-  color: white;
 }

@@ -1,7 +1,6 @@
 .bannerWrapper {
   overflow: hidden;
-  background-image: url("/banner-light.svg");
-  background-color: rgb(31, 62, 118);
+  background-image: var(--banner-url);
   background-repeat: no-repeat;
   background-position: top left;
   background-size: cover;

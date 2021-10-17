@@ -9,8 +9,7 @@
   h2 {
     font-size: 32px;
     font-weight: 100;
-    //color: white;
-    color: rgb(31, 62, 118);
+    color: var(--text-primary-color);
     margin: 0;
     span {
       font-weight: 700;
@@ -18,7 +17,7 @@
   }
   p {
     font-size: 16px;
-    color: #343d48;
+    color: var(--text-secondary-color);
     margin: 0;
     font-weight: 100;
   }

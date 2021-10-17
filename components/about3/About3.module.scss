@@ -28,12 +28,12 @@
 
 .heading {
   font-size: 32px;
-  color: rgb(18, 42, 71);
+  color: var(--text-primary-color);
   margin: 0 auto;
 }
 
 .description {
-  color: #343d48;
+  color: var(--text-secondary-color);
   line-height: 34px;
   text-align: justify;
 }

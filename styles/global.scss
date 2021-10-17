@@ -1,21 +1,73 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@100;400;500;700&display=swap");
 
-* {
-  font-family: "DM Sans", sans-serif;
+$color-black: #182837;
+$color-white: rgb(255, 255, 255);
+$color-primary-blue: rgb(31, 62, 118);
+$color-secondary-blue: rgb(18, 42, 71);
+$color-gray-light: rgba($color-white, 0.15);
+$color-gray-dark: rgba($color-black, 0.15);
+$banner-light: url("/banner-light.svg");
+$banner-dark: url("/banner-dark.svg");
+$banner-secondary-light: url("/banner-secondary-light.svg");
+$banner-secondary-dark: url("/banner-secondary-dark.svg");
+
+$white-1: rgba(255, 255, 255, 0.1);
+$white-2: rgba(255, 255, 255, 0.25);
+$white-3: rgba(255, 255, 255, 0.5);
+$white-4: rgba(255, 255, 255, 0.75);
+$dark-1: rgba(18, 42, 71, 0.1);
+$dark-2: rgba(18, 42, 71, 0.25);
+$blur0: blur(0);
+$blur: blur(15px);
+
+:root {
+  --color-page-background: #{$color-white};
+  --color-text: #{$color-white};
+  --color-border: #{$color-black};
+  --color-article-background: #{$color-white};
+  --color-article-shadow: #{$color-gray-dark};
+  --banner-url: #{$banner-light};
+  --banner-secondary-url: #{$banner-secondary-light};
+
+  --nav-opacity-1: #{$white-1};
+  --nav-opacity-2: #{$white-2};
+  --nav-opacity-3: #{$white-3};
+  --nav-opacity-4: #{$white-4};
+  --nav-full: #{$color-white};
+  --nav-blur: #{$blur0};
+  --nav-sticky-color: #{$color-primary-blue};
+
+  --text-primary-color: #{$color-primary-blue};
+  --text-secondary-color: #{$color-secondary-blue};
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-li {
-  color: white;
+.dark {
+  --color-page-background: #{$color-black};
+  --color-text: #{$color-white};
+  --color-border: #{$color-white};
+  --color-article-background: #{$color-gray-light};
+  --color-article-shadow: #{$color-gray-dark};
+  --banner-url: #{$banner-dark};
+  --banner-secondary-url: #{$banner-secondary-dark};
+  --nav-opacity-1: #{$dark-1};
+  --nav-opacity-2: #{$dark-2};
+  --nav-opacity-3: #{$dark-2};
+  --nav-opacity-4: #{$dark-2};
+  --nav-full: #{$dark-2};
+  --nav-blur: #{$blur};
+  --nav-sticky-color: #{$color-white};
+
+  --text-primary-color: #{$color-white};
+  --text-secondary-color: #{$white-4};
 }
 
 body {
   margin: 0;
-  min-height: 125vh;
+}
+
+.layout {
+  background-color: var(--color-page-background);
+  font-family: "DM Sans", sans-serif;
+  color: var(--color-text);
+  transition: all 0.1s ease;
 }

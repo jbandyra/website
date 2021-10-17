@@ -33,13 +33,13 @@
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
   h2 {
-    color: rgb(31, 62, 118);
+    color: var(--text-primary-color);
     text-align: center;
     font-size: 32px;
     font-weight: 100;
   }
   p {
-    color: #343d48;
+    color: var(--text-secondary-color);
     font-size: 32px;
     text-align: center;
   }

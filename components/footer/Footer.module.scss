@@ -1,5 +1,5 @@
 .footerWrapper {
-  background-image: url("/banner-secondary.svg");
+  background-image: var(--banner-secondary-url);
   background-size: cover;
 }
 

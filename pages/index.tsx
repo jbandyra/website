@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import Banner from "@components/banner/Banner";
 import Header from "@components/header/Header";
 import About from "@components/about/About";
@@ -7,15 +9,23 @@ import Projects from "@components/projects/Projects";
 import Footer from "@components/footer/Footer";
 
 export default function Home() {
+  const [isDarkModeOn, toggleDarkMode] = useState(false);
+
+  const handleDarkModeToggle = () => {
+    toggleDarkMode((prevState) => !prevState);
+  };
   return (
-    <>
-      <Header />
+    <div className={`layout ${isDarkModeOn ? "dark" : ""}`}>
+      <Header
+        isDarkModeOn={isDarkModeOn}
+        handleDarkModeToggle={handleDarkModeToggle}
+      />
       <Banner />
       <About />
       <About2 />
       <About3 />
       <Projects />
       <Footer />
-    </>
+    </div>
   );
 }
