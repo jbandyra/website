@@ -1,18 +1,16 @@
 .projectsWrapper {
-  background-image: url("/banner-secondary.svg");
-  background-size: cover;
-}
-
-.projectsInnerWrapper {
   max-width: 1310px;
   width: 100%;
-  margin: 0 auto;
-  padding: 60px 0;
+  margin: 0 auto 60px;
+  @media (max-width: 1310px) {
+    width: 90%;
+  }
 
   h2 {
     font-size: 32px;
     font-weight: 100;
-    color: white;
+    //color: white;
+    color: rgb(31, 62, 118);
     margin: 0;
     span {
       font-weight: 700;
@@ -20,8 +18,17 @@
   }
   p {
     font-size: 16px;
+    color: #343d48;
     margin: 0;
     font-weight: 100;
+  }
+  h2,
+  p {
+    @media (max-width: 1000px) {
+      margin: 0 auto;
+      text-align: center;
+      width: 90%;
+    }
   }
 }
 
@@ -30,11 +37,15 @@
   margin-top: 50px;
   gap: 50px;
   width: 100%;
-  height: 200px;
 }
 .projectImageWrapper {
   position: relative;
   width: 30%;
+  height: fit-content;
+  @media (max-width: 1000px) {
+    margin: 0 auto;
+    width: 80%;
+  }
   button {
     visibility: hidden;
     opacity: 0;
@@ -50,12 +61,12 @@
     font-weight: 700;
     &:hover {
       background-color: #4b71b2;
+      cursor: pointer;
     }
   }
   &:hover {
     .projectImage {
       filter: brightness(0.3);
-      cursor: pointer;
     }
     button {
       visibility: visible;

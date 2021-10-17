@@ -5,21 +5,19 @@ import DesolationPicture from "@public/desolation.jpeg";
 const Projects = () => {
   return (
     <div className={styles.projectsWrapper}>
-      <div className={styles.projectsInnerWrapper}>
-        <h2>
-          Moje <span>projekty</span>
-        </h2>
-        <p>
-          poznaj moje dotychczasowe prace i partnerów, którzy z dumą prezentują
-          efekty naszej współpracy.
-        </p>
-        <div className={styles.projectsImagesWrapper}>
-          <div className={styles.projectImageWrapper}>
-            <div className={styles.projectImage}>
-              <Image src={DesolationPicture} layout="responsive" />
-            </div>
-            <button>dowiedz się więcej</button>
+      <h2>
+        Moje <span>projekty</span>
+      </h2>
+      <p>
+        poznaj moje dotychczasowe prace i partnerów, którzy z dumą prezentują
+        efekty naszej współpracy.
+      </p>
+      <div className={styles.projectsImagesWrapper}>
+        <div className={styles.projectImageWrapper}>
+          <div className={styles.projectImage}>
+            <Image src={DesolationPicture} layout="responsive" />
           </div>
+          <button>dowiedz się więcej</button>
         </div>
       </div>
     </div>
