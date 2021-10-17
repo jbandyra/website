@@ -1,15 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@100;400;500;700&display=swap");
 
-$color-black: #182837;
+$color-black: #111c25;
 $color-white: rgb(255, 255, 255);
 $color-primary-blue: rgb(31, 62, 118);
 $color-secondary-blue: rgb(18, 42, 71);
 $color-gray-light: rgba($color-white, 0.15);
 $color-gray-dark: rgba($color-black, 0.15);
 $banner-light: url("/banner-light.svg");
-$banner-dark: url("/banner-dark.svg");
+$banner-dark: linear-gradient(
+    180deg,
+    rgba(148, 64, 59, 0.75) 0%,
+    rgba(122, 38, 101, 0.5) 49%,
+    rgba(6, 56, 115, 0.25) 100%
+  ),
+  url("/banner-dark.svg");
 $banner-secondary-light: url("/banner-secondary-light.svg");
-$banner-secondary-dark: url("/banner-secondary-dark.svg");
+$banner-secondary-dark: linear-gradient(
+    0deg,
+    rgba(148, 64, 59, 0.5) 0%,
+    rgba(122, 38, 101, 0.25) 40%,
+    rgba(6, 56, 115, 0.25) 100%
+  ),
+  url("/banner-secondary-dark.svg");
 
 $white-1: rgba(255, 255, 255, 0.1);
 $white-2: rgba(255, 255, 255, 0.25);
