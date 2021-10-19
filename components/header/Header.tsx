@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useTranslation } from "next-i18next";
 import Image from "next/image";
 
 import Logo from "@assets/logo.png";
@@ -9,12 +10,13 @@ import { VscClose } from "react-icons/vsc";
 import { BsFillSunFill, BsFillMoonFill } from "react-icons/bs";
 
 const Header = ({ isDarkModeOn, handleDarkModeToggle }) => {
+  const { t } = useTranslation("common");
   const [offsetY, setOffsetY] = useState(0);
   const [isMobileNavOn, setMobileNav] = useState(false);
   const menuItems = [
-    { label: "Strona Główna", path: "#" },
-    { label: "O mnie", path: "#about" },
-    { label: "Kontakt", path: "#contact" },
+    { label: t("home"), path: "#" },
+    { label: t("about"), path: "#about" },
+    { label: t("contact"), path: "#contact" },
     {
       label: isDarkModeOn ? "☀️" : "🌙",
       onClick: () => handleDarkModeToggle(),
