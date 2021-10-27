@@ -18,34 +18,33 @@ const About = () => {
           <div className={styles.aboutIconBoxPrimary}>
             <IoBookSharp size="50px" />
           </div>
-          <h2 className={styles.aboutIconBoxTitle}>Wykształcenie</h2>
+          <h2 className={styles.aboutIconBoxTitle}>{t("academics.title")}</h2>
           <p className={styles.aboutIconBoxDescription}>
-            Stopień magistra Uniwersytetu Warszawskiego w dziedzinach
-            translatoryki i pedagogiki nauczania języków obcych.
+            {t("academics.description")}
           </p>
         </div>
         <div className={styles.aboutIconBoxWrapper}>
           <div className={styles.aboutIconBoxSecondary}>
             <GiLightBulb size="50px" />
           </div>
-          <h2 className={styles.aboutIconBoxTitle}>Doświadczenie</h2>
+          <h2 className={styles.aboutIconBoxTitle}>{t("experience.title")}</h2>
           <p className={styles.aboutIconBoxDescription}>
-            Wiele lat doświadczenia w sektorze edukacji oraz stażu w roli
-            tłumacza pisemnego i lokalizatora gier.
+            {t("experience.description")}
           </p>
         </div>
         <div className={styles.aboutIconBoxWrapper}>
           <div className={styles.aboutIconBoxTertiary}>
             <GiHumanPyramid size="50px" />
           </div>
-          <h2 className={styles.aboutIconBoxTitle}>Podejście</h2>
+          <h2 className={styles.aboutIconBoxTitle}> {t("attitude.title")}</h2>
           <p className={styles.aboutIconBoxDescription}>
-            {/* TODO add bold spans */}
-            Bez pośredników - przetłumaczę Twoje treści bezpośrednio dla Ciebie
-            i zadbam, aby wiernie reprezentowały Twój zamysł. Twój zamysł.
-            Identyczna idea przyświeca mi w roli nauczyciela. Chcę, aby każdy z
-            moich uczniów czuł się doceniony, aby dokonywał wymiernych i
-            istotnych postępów w nauce języka.
+            <Trans i18nKey="attitude.description">
+              Cut the middlemen - <span>I will translate</span> your texts
+              directly for you and will ensure they reflect exactly what you
+              stand for. I apply the same rules in my work as a teacher. I want
+              my students to feel appreciated, to make tangible and relevant
+              progress as they learn a foreign language.
+            </Trans>
           </p>
         </div>
       </div>

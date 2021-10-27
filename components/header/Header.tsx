@@ -7,7 +7,6 @@ import LogoDark from "@assets/logo-dark.png";
 import styles from "./Header.module.scss";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { VscClose } from "react-icons/vsc";
-import { BsFillSunFill, BsFillMoonFill } from "react-icons/bs";
 
 const Header = ({ isDarkModeOn, handleDarkModeToggle }) => {
   const { t } = useTranslation("common");
