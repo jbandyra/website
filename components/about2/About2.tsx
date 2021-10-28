@@ -1,6 +1,8 @@
 import styles from "./About2.module.scss";
+import { useTranslation } from "next-i18next";
 
 const About2 = () => {
+  const { t } = useTranslation("common");
   return (
     <section id="about" className={styles.aboutWrapper}>
       <div className={styles.imgWrapper} />
@@ -8,10 +10,7 @@ const About2 = () => {
         <h2>
           Jakub <strong>Bandyra</strong>
         </h2>
-        <p>
-          Twórca działalności, nauczyciel, magister filologii angielskiej,
-          translatoryk
-        </p>
+        <p>{t("aboutJake")}</p>
       </div>
     </section>
   );

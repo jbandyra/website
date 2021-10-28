@@ -1,0 +1,42 @@
+{
+  "home": "Strona główna",
+  "about": "O mnie",
+  "contact": "Kontakt",
+
+  "banner": {
+    "title": "Twój tłumacz i lektor języka angielskiego",
+    "subtitle": "moim celem jest <1>Twoja satysfakcja</1>."
+  },
+
+  "academics": {
+    "title": "Wykształcenie",
+    "description": "Stopień magistra Uniwersytetu Warszawskiego w dziedzinach translatoryki i pedagogiki nauczania języków obcych."
+  },
+  "experience": {
+    "title": "Doświadczenie",
+    "description": "Wiele lat doświadczenia w sektorze edukacji oraz stażu w roli tłumacza pisemnego i lokalizatora gier."
+  },
+  "attitude": {
+    "title": "Podejście",
+    "description": "Bez pośredników - <1>przetłumaczę</1> Twoje treści <1>bezpośrednio</1> dla Ciebie i zadbam, aby <1>wiernie</1> reprezentowały Twój zamysł. Identyczna idea przyświeca mi w roli nauczyciela. Chcę, aby każdy z moich uczniów czuł się <1>doceniony</1>, aby dokonywał <1>wymiernych</1> i istotnych <1>postępów</1> w nauce języka."
+  },
+
+  "aboutJake": "Twórca działalności, nauczyciel, magister filologii angielskiej, translatoryk",
+  "history": {
+    "title": "Moja historia \uD83D\uDD70",
+    "description": "Język angielski i kultura krajów anglosaskich od zawsze była źródłem mojej pasji, której chęć rozwoju przeprowadziła mnie przez kilka szczebli życia akademickiego, zawodowego i prywatnego. Rozpoczynając pracę w roli nauczyciela zdałem sobie sprawę jak ważna jest satysfakcja osób, z którymi pracuję. Każdy ich krok ku zwiększeniu kompetencji językowych jest dla mnie osobistym sukcesem. Nie inaczej jest w przypadku tłumaczeń. Każdy klient, któremu pomogłem w komunikacji z odbiorcą w obcym języku stanowi ogromną wartość motywującą mnie do dalszej pracy."
+  },
+  "competence": {
+    "title": "Moje kompetencje \uD83D\uDD8B",
+    "description": "Posiadając wiele lat doświadczenia jako nauczyciel pozwoliło mi zrozumieć i rozwinąć zdolności interpersonalne, które pomagają mi nie tylko w przeprowadzaniu lekcji języka obcego, ale także w umiejętnościach komunikacji z klientem, jak i w wiernym oraz przekonującym przekładzie tekstów w języku polskim i angielskim."
+  },
+
+  "myprojects": {
+    "title": "Moje <1>projekty<1>",
+    "description": "poznaj moje dotychczasowe prace i partnerów, którzy z dumą prezentują efekty naszej współpracy.",
+    "more": "dowiedz się więcej"
+  },
+
+
+  "contactMe": "Skontaktuj się ze mną!"
+}

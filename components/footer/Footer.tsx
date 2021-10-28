@@ -4,8 +4,10 @@ import Logo from "@assets/logo.png";
 import { GrMail } from "react-icons/gr";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { SiDiscord } from "react-icons/si";
+import { useTranslation } from "next-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation("common");
   return (
     <section className={styles.footerWrapper}>
       <div className={styles.footerInnerWrapper}>
@@ -13,7 +15,7 @@ const Footer = () => {
           <Image src={Logo} width="80px" height="80px" alt="Logo" />
         </div>
         <div>
-          <h3>Skontaktuj się ze mną!</h3>
+          <h3>{t("contactMe")}</h3>
           <ul>
             <li>
               <GrMail size="20px" />

@@ -1,23 +1,25 @@
 import styles from "./Projects.module.scss";
 import Image from "next/image";
-import DesolationPicture from "@public/desolation.jpeg";
+import DesolationPicture from "@public/projects/desolation.jpeg";
+import { Trans, useTranslation } from "next-i18next";
+import React from "react";
 
 const Projects = () => {
+  const { t } = useTranslation("common");
   return (
     <div className={styles.projectsWrapper}>
       <h2>
-        Moje <span>projekty</span>
+        <Trans i18nKey="myprojects.title">
+          my <span>projects</span>.
+        </Trans>
       </h2>
-      <p>
-        poznaj moje dotychczasowe prace i partnerów, którzy z dumą prezentują
-        efekty naszej współpracy.
-      </p>
+      <p>{t("myprojects.description")}</p>
       <div className={styles.projectsImagesWrapper}>
         <div className={styles.projectImageWrapper}>
           <div className={styles.projectImage}>
             <Image src={DesolationPicture} layout="responsive" />
           </div>
-          <button>dowiedz się więcej</button>
+          <button>{t("myprojects.more")}</button>
         </div>
       </div>
     </div>
