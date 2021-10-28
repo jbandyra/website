@@ -51,6 +51,8 @@ $blur: blur(15px);
 
   --text-primary-color: #{$color-primary-blue};
   --text-secondary-color: #{$color-secondary-blue};
+
+  --about-me-border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .dark {
@@ -71,6 +73,8 @@ $blur: blur(15px);
 
   --text-primary-color: #{$color-white};
   --text-secondary-color: #{$white-4};
+
+  --about-me-border: 1px solid rgba(122, 38, 101, 1);
 }
 
 body {

@@ -28,7 +28,7 @@
 
 .textWrapper {
   width: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: var(--about-me-border);
   border-left: none;
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
