@@ -6,8 +6,6 @@
     "start": "next start"
   },
   "dependencies": {
-    "airtable": "^0.11.1",
-    "dotenv": "^10.0.0",
     "lottie-web": "^5.7.13",
     "next": "latest",
     "next-i18next": "^8.9.0",

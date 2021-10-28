@@ -19,11 +19,11 @@ const Footer = () => {
           <ul>
             <li>
               <GrMail size="20px" />
-              email: jbandyra@icloud.com
+              email: <a href="mailto:jbandyra@icloud.com">jbandyra@icloud.com</a>
             </li>
             <li>
               <BsFillTelephoneFill size="20px" />
-              tel: +48 694 971 883
+              tel: <a href="tel:+48 694 971 883">+48 694 971 883</a>
             </li>
             <li>
               <SiDiscord size="20px" /> discord: liquify#7725
