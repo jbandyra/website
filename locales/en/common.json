@@ -20,5 +20,23 @@
     "description": "Cut the middlemen - <1>I will translate</1> your texts <2>directly<2> for you and will ensure they reflect exactly what you stand for. I apply the same rules in my work as a teacher. I want my students to feel appreciated, to make tangible and relevant progress as they learn a foreign language."
   },
 
-  "aboutJake": "Founder, educator, MA in linguistics (philology), graduate in translation studies"
+  "aboutJake": "Founder, educator, MA in linguistics (philology), graduate in translation studies",
+
+  "history": {
+    "title": "My story \uD83D\uDD70",
+    "description": "English as a language as well as the culture of the English-speaking world have always been my passion. The drive to develop it has guided me through several steps of academic, professional and private life. Starting as an English teacher, I quickly realized how important it is to satisfy the needs of your pupils. I treat each and every step they take to develop their foreign language skills as personal success. It is no different when it comes to translation. Every satisfied customer whom I helped to communicate in a foreign language has motivated me to vigorously continue my work."
+  },
+  "competence": {
+    "title": "Moje kompetencje \uD83D\uDD8B",
+    "description": "Being a teacher for many years helped me understand and develop interpersonal skills, which assist me not only as I conduct my English classes, but also in communication with my customers as well as in my work to faithfully and convincingly translate various texts between Polish and English."
+  },
+
+  "myprojects": {
+    "title": "My <1>projects<1>",
+    "description": "read about my previous work and partners, who proudly present the effects of our co-operation.",
+    "more": "learn more"
+  },
+
+
+  "contactMe": "Find me here!"
 }
