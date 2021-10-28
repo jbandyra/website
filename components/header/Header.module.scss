@@ -89,6 +89,7 @@
 
 .headerHamburgerDark {
   @extend .headerHamburger;
+  color: var(--text-primary-color);
 }
 
 .menu {
@@ -97,9 +98,9 @@
   left: 0;
   bottom: 0;
   right: 0;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
+  background: rgba(20, 38, 73, 0.5);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
   transition: all 0.3s ease;
   opacity: 0;
   visibility: hidden;
@@ -119,9 +120,6 @@
       transform: translateY(10%);
       opacity: 0;
     }
-    // .darkListItem {
-    //   // color: $color-primary;
-    // }
   }
 }
 
@@ -145,26 +143,26 @@
   ul {
     li:first-of-type {
       animation-name: listItem;
-      animation-duration: 0.4s;
+      animation-duration: 0.2s;
       animation-delay: 0.3s;
       animation-fill-mode: forwards;
     }
     li:nth-of-type(2) {
       animation-name: listItem;
-      animation-duration: 0.4s;
-      animation-delay: 0.5s;
+      animation-duration: 0.2s;
+      animation-delay: 0.4s;
       animation-fill-mode: forwards;
     }
     li:nth-of-type(3) {
       animation-name: listItem;
-      animation-duration: 0.4s;
-      animation-delay: 0.7s;
+      animation-duration: 0.2s;
+      animation-delay: 0.5s;
       animation-fill-mode: forwards;
     }
     li:nth-of-type(4) {
       animation-name: listItem;
-      animation-duration: 0.4s;
-      animation-delay: 1s;
+      animation-duration: 0.2s;
+      animation-delay: 0.6s;
       animation-fill-mode: forwards;
     }
   }
@@ -174,7 +172,7 @@
   position: fixed;
   top: 15px;
   left: 15px;
-  color: rgb(31, 62, 118);
+  color: white;
 }
 
 .closeIconDark {

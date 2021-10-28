@@ -28,6 +28,13 @@ const Header = ({ isDarkModeOn, handleDarkModeToggle }) => {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+  useEffect(() => {
+    if (isMobileNavOn) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [isMobileNavOn]);
 
   const getNavStyles = () => {
     switch (true) {

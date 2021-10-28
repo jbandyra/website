@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import Banner from "@components/banner/Banner";
@@ -17,7 +17,10 @@ export default function Home({ locale }) {
   };
 
   return (
-    <div className={`layout ${isDarkModeOn ? "dark" : ""}`}>
+    <div
+      className={`layout ${isDarkModeOn ? "dark" : ""}`}
+      style={{ overflow: "hidden" }}
+    >
       <Header
         isDarkModeOn={isDarkModeOn}
         handleDarkModeToggle={handleDarkModeToggle}
