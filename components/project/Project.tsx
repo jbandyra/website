@@ -16,8 +16,6 @@ const Project = ({ project, locale }) => {
       <div className={styles.projectImageWrapper}>
         <Image
           src={`/projects/${project.large_image}`}
-          width="1280px"
-          height="720px"
           layout="fill"
           objectFit="cover"
         />{" "}

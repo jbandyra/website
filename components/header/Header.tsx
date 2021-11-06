@@ -25,7 +25,7 @@ const Header = ({ isDarkModeOn, handleDarkModeToggle, secondary = false }) => {
     { label: t("contact"), path: "/#contact" },
     {
       label: isDarkModeOn ? "☀️" : "🌙",
-      onClick: () => handleDarkModeToggle(),
+      onClick: handleDarkModeToggle,
       styles: styles.navDarkToggle,
       mobileNavDisabled: true,
     },
@@ -139,6 +139,15 @@ const Header = ({ isDarkModeOn, handleDarkModeToggle, secondary = false }) => {
             ) : null
           )}
         </ul>
+        <div
+          className={styles.mobileDarkModeToggle}
+          onClick={handleDarkModeToggle}
+        >
+          {isDarkModeOn ? "☀️" : "🌙"}
+        </div>
+        <div className={styles.mobileLanguageToggle} onClick={switchLocale}>
+          {localeEmoji}
+        </div>
       </div>
     </>
   );
