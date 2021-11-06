@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useTranslation } from "next-i18next";
 import Image from "next/image";
+import Link from "next/link";
 
 import Logo from "@assets/logo.png";
 import LogoDark from "@assets/logo-dark.png";
@@ -8,18 +9,31 @@ import styles from "./Header.module.scss";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { VscClose } from "react-icons/vsc";
 
-const Header = ({ isDarkModeOn, handleDarkModeToggle }) => {
+import { useLocale } from "@hooks/useLocaleSwitch";
+
+const Header = ({ isDarkModeOn, handleDarkModeToggle, secondary = false }) => {
+  const { switchLocale, localeEmoji } = useLocale();
+
   const { t } = useTranslation("common");
+
   const [offsetY, setOffsetY] = useState(0);
   const [isMobileNavOn, setMobileNav] = useState(false);
+
   const menuItems = [
-    { label: t("home"), path: "#" },
-    { label: t("about"), path: "#about" },
-    { label: t("contact"), path: "#contact" },
+    { label: t("home"), path: "/#home" },
+    { label: t("about"), path: "/#about" },
+    { label: t("contact"), path: "/#contact" },
     {
       label: isDarkModeOn ? "☀️" : "🌙",
       onClick: () => handleDarkModeToggle(),
       styles: styles.navDarkToggle,
+      mobileNavDisabled: true,
+    },
+    {
+      label: localeEmoji,
+      onClick: switchLocale,
+      styles: styles.navDarkToggle,
+      mobileNavDisabled: true,
     },
   ];
   useEffect(() => {
@@ -57,15 +71,26 @@ const Header = ({ isDarkModeOn, handleDarkModeToggle }) => {
     <>
       <nav className={getNavStyles()}>
         <div className={styles.headerInnerWrapper}>
-          <Image
-            src={offsetY > 75 && !isDarkModeOn ? LogoDark : Logo}
-            width="60px"
-            height="60px"
-            alt="Logo"
-          />
+          <Link href="/">
+            <a>
+              <Image
+                src={
+                  (offsetY > 75 && !isDarkModeOn) ||
+                  (secondary && !isDarkModeOn)
+                    ? LogoDark
+                    : Logo
+                }
+                width="60px"
+                height="60px"
+                alt="Logo"
+              />
+            </a>
+          </Link>
           <ul
             className={
-              offsetY > 75 ? styles.headerListSticky : styles.headerList
+              offsetY > 75 || secondary
+                ? styles.headerListSticky
+                : styles.headerList
             }
           >
             {menuItems.map((item, idx) => (
@@ -74,13 +99,19 @@ const Header = ({ isDarkModeOn, handleDarkModeToggle }) => {
                 onClick={() => (item.onClick ? item.onClick() : null)}
                 className={item.styles ?? null}
               >
-                {item.label}
+                {item.path ? (
+                  <Link href={item.path}>{item.label}</Link>
+                ) : (
+                  item.label
+                )}
               </li>
             ))}
           </ul>
           <div
             className={
-              offsetY > 75 ? styles.headerHamburgerDark : styles.headerHamburger
+              offsetY > 75 || secondary
+                ? styles.headerHamburgerDark
+                : styles.headerHamburger
             }
           >
             <GiHamburgerMenu size="32px" onClick={() => setMobileNav(true)} />
@@ -94,17 +125,19 @@ const Header = ({ isDarkModeOn, handleDarkModeToggle }) => {
           onClick={() => setMobileNav(false)}
         />
         <ul>
-          {menuItems.map((item, idx) => (
-            <li
-              key={idx}
-              onClick={() => (item.onClick ? item.onClick() : null)}
-              className={
-                item.styles ?? offsetY > 290 ? styles.darkListItem : ""
-              }
-            >
-              {item.label}
-            </li>
-          ))}
+          {menuItems.map((item, idx) =>
+            !item.mobileNavDisabled ? (
+              <li
+                key={idx}
+                onClick={() => setMobileNav(false)}
+                className={
+                  item.styles ?? offsetY > 290 ? styles.darkListItem : ""
+                }
+              >
+                <Link href={item.path}>{item.label}</Link>
+              </li>
+            ) : null
+          )}
         </ul>
       </div>
     </>

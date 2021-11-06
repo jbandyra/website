@@ -1,10 +1,9 @@
 import styles from "./Projects.module.scss";
 import Image from "next/image";
-import DesolationPicture from "@public/projects/desolation.jpeg";
+import Link from "next/link";
 import { Trans, useTranslation } from "next-i18next";
-import React from "react";
 
-const Projects = () => {
+const Projects = ({ projects }) => {
   const { t } = useTranslation("common");
   return (
     <div className={styles.projectsWrapper}>
@@ -13,14 +12,21 @@ const Projects = () => {
           my <span>projects</span>.
         </Trans>
       </h2>
+
       <p>{t("myprojects.description")}</p>
-      <div className={styles.projectsImagesWrapper}>
-        <div className={styles.projectImageWrapper}>
-          <div className={styles.projectImage}>
-            <Image src={DesolationPicture} layout="responsive" />
+      <div className={styles.projectsInnerWrapper}>
+        {projects.map((project) => (
+          <div className={styles.projectImageWrapper}>
+            <Image
+              src={`/projects/${project.image}`}
+              layout="fill"
+              objectFit="cover"
+            />
+            <Link href={`/projects/${project.slug}`}>
+              <a>{t("myprojects.more")}</a>
+            </Link>
           </div>
-          <button>{t("myprojects.more")}</button>
-        </div>
+        ))}
       </div>
     </div>
   );

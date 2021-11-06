@@ -6,7 +6,7 @@ import { GiLightBulb, GiHumanPyramid } from "react-icons/gi";
 const About = () => {
   const { t } = useTranslation("common");
   return (
-    <section id="about" className={styles.aboutWrapper}>
+    <section className={styles.aboutWrapper}>
       <p className={styles.aboutHeader}>{t("about")}</p>
       <h2 className={styles.aboutDescription}>
         <Trans i18nKey="banner.subtitle">

@@ -57,6 +57,10 @@
     &:hover {
       text-decoration: underline;
     }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
   }
   li + li {
     margin-left: 50px;
@@ -119,6 +123,10 @@
       margin-bottom: 20px;
       transform: translateY(10%);
       opacity: 0;
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
     }
   }
 }

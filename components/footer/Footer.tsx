@@ -9,7 +9,7 @@ import { useTranslation } from "next-i18next";
 const Footer = () => {
   const { t } = useTranslation("common");
   return (
-    <section className={styles.footerWrapper}>
+    <section className={styles.footerWrapper} id="contact">
       <div className={styles.footerInnerWrapper}>
         <div className={styles.logoWrapper}>
           <Image src={Logo} width="80px" height="80px" alt="Logo" />
@@ -19,7 +19,8 @@ const Footer = () => {
           <ul>
             <li>
               <GrMail size="20px" />
-              email: <a href="mailto:jbandyra@icloud.com">jbandyra@icloud.com</a>
+              email:{" "}
+              <a href="mailto:jbandyra@icloud.com">jbandyra@icloud.com</a>
             </li>
             <li>
               <BsFillTelephoneFill size="20px" />
