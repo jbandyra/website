@@ -10,7 +10,11 @@ const ProjectPage = ({ project }) => {
   const { locale } = router;
 
   return (
-    <Layout secondary>
+    <Layout
+      secondary
+      title={project[`title_${locale}`]}
+      description={project[`description_${locale}`]}
+    >
       <Project project={project} locale={locale} />
     </Layout>
   );

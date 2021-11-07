@@ -16,7 +16,7 @@ const Projects = ({ projects }) => {
       <p>{t("myprojects.description")}</p>
       <div className={styles.projectsInnerWrapper}>
         {projects.map((project) => (
-          <div className={styles.projectImageWrapper}>
+          <div key={project.slug} className={styles.projectImageWrapper}>
             <Image
               src={`/projects/${project.image}`}
               layout="fill"

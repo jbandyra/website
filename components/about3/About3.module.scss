@@ -30,10 +30,13 @@
   font-size: 32px;
   color: var(--text-primary-color);
   margin: 0 auto;
+  @media (max-width: 420px) {
+    font-size: 28px;
+  }
 }
 
 .description {
   color: var(--text-secondary-color);
-  line-height: 34px;
+  line-height: 28px;
   text-align: justify;
 }

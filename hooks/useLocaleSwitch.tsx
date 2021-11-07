@@ -8,8 +8,10 @@ export const useLocale = () => useContext(LocaleContext);
 export const LocaleProvider = ({ children }) => {
   const router = useRouter();
   const { locale, pathname, asPath, query } = router;
-  const toPL = () => router.push({ pathname, query }, asPath, { locale: "pl" });
-  const toEN = () => router.push({ pathname, query }, asPath, { locale: "en" });
+  const toPL = () =>
+    router.push({ pathname, query }, asPath, { locale: "pl", scroll: false });
+  const toEN = () =>
+    router.push({ pathname, query }, asPath, { locale: "en", scroll: false });
   const switchLocale = () => (locale === "pl" ? toEN() : toPL());
   const localeEmoji = locale === "pl" ? "🇬🇧️" : "🇵🇱";
   return (

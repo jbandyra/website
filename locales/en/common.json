@@ -1,9 +1,15 @@
 {
+  "website": {
+    "title": "Jakub Bandyra - Your English teacher and translator",
+    "description": "I will translate your texts your texts directly for you and will ensure they reflect exactly what you stand for."
+  },
+
+
   "home": "Home",
   "about": "About me",
   "contact": "Contact",
   "banner": {
-    "title": "Your english teacher and translator",
+    "title": "Your English teacher and translator",
     "subtitle": "my goal is <1>your satisfaction</1>."
   },
 
