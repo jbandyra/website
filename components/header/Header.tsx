@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useTranslation } from "next-i18next";
 import Image from "next/image";
 import Link from "next/link";
+import Toggle from "@components/toggle/Toggle";
 
 import Logo from "@assets/logo.png";
 import LogoDark from "@assets/logo-dark.png";
@@ -107,14 +108,20 @@ const Header = ({ isDarkModeOn, handleDarkModeToggle, secondary = false }) => {
               </li>
             ))}
           </ul>
-          <div
-            className={
-              offsetY > 75 || secondary
-                ? styles.headerHamburgerDark
-                : styles.headerHamburger
-            }
-          >
-            <GiHamburgerMenu size="32px" onClick={() => setMobileNav(true)} />
+          <div className={styles.mobileMenu}>
+            <Toggle
+              handleOnClick={handleDarkModeToggle}
+              active={!isDarkModeOn}
+            />
+            <div
+              className={
+                offsetY > 75 || secondary
+                  ? styles.headerHamburgerDark
+                  : styles.headerHamburger
+              }
+            >
+              <GiHamburgerMenu size="32px" onClick={() => setMobileNav(true)} />
+            </div>
           </div>
         </div>
       </nav>
@@ -139,12 +146,6 @@ const Header = ({ isDarkModeOn, handleDarkModeToggle, secondary = false }) => {
             ) : null
           )}
         </ul>
-        <div
-          className={styles.mobileDarkModeToggle}
-          onClick={handleDarkModeToggle}
-        >
-          {isDarkModeOn ? "☀️" : "🌙"}
-        </div>
         <div className={styles.mobileLanguageToggle} onClick={switchLocale}>
           {localeEmoji}
         </div>

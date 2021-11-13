@@ -174,17 +174,12 @@
       animation-fill-mode: forwards;
     }
   }
-  .mobileDarkModeToggle,
   .mobileLanguageToggle {
     font-size: 46px;
     position: fixed;
     bottom: 24px;
-  }
-  .mobileLanguageToggle {
-    left: 24px;
-  }
-  .mobileDarkModeToggle {
-    right: 24px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
@@ -197,4 +192,15 @@
 
 .closeIconDark {
   @extend .closeIcon;
+}
+
+.mobileMenu {
+  @media (min-width: 900px) {
+    display: none;
+  }
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 6px;
 }
