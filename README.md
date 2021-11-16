@@ -1,34 +1,30 @@
-# TypeScript & Styled Components Next.js example
+# Jay-ban.pl
 
-This is a really simple project that show the usage of Next.js with TypeScript and Styled Components.
 
-## Preview
+#### How to create a project?
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
+All projects can be found in _projects folder. To create a project add new .md file to _projects folder
+##### Important! Name of the file will be used to generate url path to the project e.g. **beautiful-desolation**.md -> jay-ban.pl/projects/**beautiful-desolation**
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-typescript-styled-components)
 
-## Deploy your own
+#### How to edit a project?
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+```
+---
+title_en: *Title of the project in English*
+title_pl: *Title of the project in Polish*
+description_en: *description in English*
+description_pl: *description in Polish*
+image: name of the image, e.g. desolation.jpeg (image will be displayed on Home page)
+large_image: name of the  large image, e.g. desolation.jpeg (image will be displayed on Project page)
+url: url to the project
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-typescript-styled-components&project-name=with-typescript-styled-components&repository-name=with-typescript-styled-components)
-
-## How to use it?
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-typescript-styled-components with-typescript-styled-components-app
-# or
-yarn create next-app --example with-typescript-styled-components with-typescript-styled-components-app
+date: date in format DD-MM-YYYY (projects are sorted on home page starting from last)
+---
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+**Images should be put inside `public/projects` folder**
 
-## Notes
+#### How to remove a project?
+simply remove .md file from the repository
 
-This is an amalgamation of the 2 existing examples:
-
-- [with-typescript](https://github.com/vercel/next.js/tree/canary/examples/with-typescript)
-- [with-styled-components](https://github.com/vercel/next.js/tree/canary/examples/with-styled-components)
