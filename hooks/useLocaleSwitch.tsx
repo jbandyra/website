@@ -1,5 +1,6 @@
 import { createContext, useContext } from "react";
 import { useRouter } from "next/router";
+import ReactCountryFlag from "react-country-flag";
 
 const LocaleContext = createContext(null);
 
@@ -13,29 +14,15 @@ export const LocaleProvider = ({ children }) => {
   const toEN = () =>
     router.push({ pathname, query }, asPath, { locale: "en", scroll: false });
   const switchLocale = () => (locale === "pl" ? toEN() : toPL());
-  const localeEmoji = locale === "pl" ? "🇬🇧️" : "🇵🇱";
+  const localeEmoji =
+    locale === "pl" ? (
+      <ReactCountryFlag countryCode="GB" svg />
+    ) : (
+      <ReactCountryFlag countryCode="PL" svg />
+    );
   return (
     <LocaleContext.Provider value={{ locale, switchLocale, localeEmoji }}>
       {children}
     </LocaleContext.Provider>
   );
 };
-
-// And use it like;
-
-// const App = () => {
-//   return (
-//     <SomeProvider>
-//       <div>
-//         <p>This is my app!</p>
-//         <Main />
-//       </div>
-//     </SomeProvider>
-//   );
-// };
-//
-// const Main = () => {
-//   const { someState, setSomeState } = useSomeContext();
-//
-//   return <p>{someState}</p>;
-// };

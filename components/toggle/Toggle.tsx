@@ -4,9 +4,9 @@
 
 import React from "react";
 
-function Toggle({ active, handleOnClick }) {
+function Toggle({ active, handleOnClick, className = "" }) {
   return (
-    <div className="container--toggle">
+    <div className={`${className} container--toggle`}>
       <input
         aria-label="dark mode toggle"
         role="switch"

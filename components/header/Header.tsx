@@ -25,12 +25,6 @@ const Header = ({ isDarkModeOn, handleDarkModeToggle, secondary = false }) => {
     { label: t("about"), path: "/#about" },
     { label: t("contact"), path: "/#contact" },
     {
-      label: isDarkModeOn ? "☀️" : "🌙",
-      onClick: handleDarkModeToggle,
-      styles: styles.navDarkToggle,
-      mobileNavDisabled: true,
-    },
-    {
       label: localeEmoji,
       onClick: switchLocale,
       styles: styles.navDarkToggle,
@@ -107,9 +101,16 @@ const Header = ({ isDarkModeOn, handleDarkModeToggle, secondary = false }) => {
                 )}
               </li>
             ))}
+            <li>
+              <Toggle
+                handleOnClick={handleDarkModeToggle}
+                active={!isDarkModeOn}
+              />
+            </li>
           </ul>
           <div className={styles.mobileMenu}>
             <Toggle
+              className="mobile"
               handleOnClick={handleDarkModeToggle}
               active={!isDarkModeOn}
             />

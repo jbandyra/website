@@ -58,8 +58,10 @@
   position: relative;
   grid-area: toggle;
   transform: scale(0.6);
-  @media (min-width: 900px) {
-    display: none;
+  &.mobile {
+    @media (min-width: 900px) {
+      display: none;
+    }
   }
 }
 
