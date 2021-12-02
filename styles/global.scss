@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@100;400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@100;400;500;700&display=swap');
 
 $color-black: #111c25;
 $color-white: rgb(255, 255, 255);
@@ -6,22 +6,22 @@ $color-primary-blue: rgb(31, 62, 118);
 $color-secondary-blue: rgb(18, 42, 71);
 $color-gray-light: rgba($color-white, 0.15);
 $color-gray-dark: rgba($color-black, 0.15);
-$banner-light: url("/banner-light.svg");
+$banner-light: url('/banner-light.svg');
 $banner-dark: linear-gradient(
-    180deg,
-    rgba(148, 64, 59, 0.75) 0%,
-    rgba(122, 38, 101, 0.5) 49%,
-    rgba(6, 56, 115, 0.25) 100%
-  ),
-  url("/banner-dark.svg");
-$banner-secondary-light: url("/banner-secondary-light.svg");
+        180deg,
+        rgba(148, 64, 59, 0.75) 0%,
+        rgba(122, 38, 101, 0.5) 49%,
+        rgba(6, 56, 115, 0.25) 100%
+    ),
+    url('/banner-dark.svg');
+$banner-secondary-light: url('/banner-secondary-light.svg');
 $banner-secondary-dark: linear-gradient(
-    0deg,
-    rgba(148, 64, 59, 0.5) 0%,
-    rgba(122, 38, 101, 0.25) 40%,
-    rgba(6, 56, 115, 0.25) 100%
-  ),
-  url("/banner-secondary-dark.svg");
+        0deg,
+        rgba(148, 64, 59, 0.5) 0%,
+        rgba(122, 38, 101, 0.25) 40%,
+        rgba(6, 56, 115, 0.25) 100%
+    ),
+    url('/banner-secondary-dark.svg');
 
 $white-1: rgba(255, 255, 255, 0.1);
 $white-2: rgba(255, 255, 255, 0.25);
@@ -33,61 +33,61 @@ $blur0: blur(0);
 $blur: blur(15px);
 
 :root {
-  --color-page-background: #{$color-white};
-  --color-text: #{$color-white};
-  --color-border: #{$color-black};
-  --color-article-background: #{$color-white};
-  --color-article-shadow: #{$color-gray-dark};
-  --banner-url: #{$banner-light};
-  --banner-secondary-url: #{$banner-secondary-light};
+    --color-page-background: #{$color-white};
+    --color-text: #{$color-white};
+    --color-border: #{$color-black};
+    --color-article-background: #{$color-white};
+    --color-article-shadow: #{$color-gray-dark};
+    --banner-url: #{$banner-light};
+    --banner-secondary-url: #{$banner-secondary-light};
 
-  --nav-opacity-1: #{$white-1};
-  --nav-opacity-2: #{$white-2};
-  --nav-opacity-3: #{$white-3};
-  --nav-opacity-4: #{$white-4};
-  --nav-full: #{$color-white};
-  --nav-blur: #{$blur0};
-  --nav-sticky-color: #{$color-primary-blue};
+    --nav-opacity-1: #{$white-1};
+    --nav-opacity-2: #{$white-2};
+    --nav-opacity-3: #{$white-3};
+    --nav-opacity-4: #{$white-4};
+    --nav-full: #{$color-white};
+    --nav-blur: #{$blur0};
+    --nav-sticky-color: #{$color-primary-blue};
 
-  --text-primary-color: #{$color-primary-blue};
-  --text-secondary-color: #{$color-secondary-blue};
+    --text-primary-color: #{$color-primary-blue};
+    --text-secondary-color: #{$color-secondary-blue};
 
-  --about-me-border: 1px solid rgba(0, 0, 0, 0.2);
+    --about-me-border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .dark {
-  --color-page-background: #{$color-black};
-  --color-text: #{$color-white};
-  --color-border: #{$color-white};
-  --color-article-background: #{$color-gray-light};
-  --color-article-shadow: #{$color-gray-dark};
-  --banner-url: #{$banner-dark};
-  --banner-secondary-url: #{$banner-secondary-dark};
-  --nav-opacity-1: #{$dark-1};
-  --nav-opacity-2: #{$dark-2};
-  --nav-opacity-3: #{$dark-2};
-  --nav-opacity-4: #{$dark-2};
-  --nav-full: #{$dark-2};
-  --nav-blur: #{$blur};
-  --nav-sticky-color: #{$color-white};
+    --color-page-background: #{$color-black};
+    --color-text: #{$color-white};
+    --color-border: #{$color-white};
+    --color-article-background: #{$color-gray-light};
+    --color-article-shadow: #{$color-gray-dark};
+    --banner-url: #{$banner-dark};
+    --banner-secondary-url: #{$banner-secondary-dark};
+    --nav-opacity-1: #{$dark-1};
+    --nav-opacity-2: #{$dark-2};
+    --nav-opacity-3: #{$dark-2};
+    --nav-opacity-4: #{$dark-2};
+    --nav-full: #{$dark-2};
+    --nav-blur: #{$blur};
+    --nav-sticky-color: #{$color-white};
 
-  --text-primary-color: #{$color-white};
-  --text-secondary-color: #{$white-4};
+    --text-primary-color: #{$color-white};
+    --text-secondary-color: #{$white-4};
 
-  --about-me-border: 1px solid rgba(122, 38, 101, 1);
+    --about-me-border: 1px solid rgba(122, 38, 101, 1);
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
+    margin: 0;
 }
 
 .layout {
-  background-color: var(--color-page-background);
-  font-family: "DM Sans", sans-serif;
-  color: var(--color-text);
-  transition: all 0.1s ease;
+    background-color: var(--color-page-background);
+    font-family: 'DM Sans', sans-serif;
+    color: var(--color-text);
+    transition: all 0.1s ease;
 }
